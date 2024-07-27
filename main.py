@@ -14,23 +14,13 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-primes = []
-not_primes = []
-for i in range(len(numbers)):
-    is_prime = True
-    n = numbers[i]
-    if n < 2:
-        continue
-    else:
-        f = n ** (1/2)
-        for j in range(2, int(f+1)):
-            if n % j == 0:
-                is_prime = False
-                break
-    if (is_prime):
-        primes.append(n)
-    else:
-        not_primes.append(n)
-print('primes:', primes)
-print('not_primes:', not_primes)
+def get_matrix(n,m,value):
+    matrix = []
+    for i in range(n):
+        matrix.append([])
+        for j in range(m):
+            matrix[i].append(value)
+    print(matrix)
+result1 = get_matrix(2, 2, 10)
+result2 = get_matrix(3, 5, 42)
+result3 = get_matrix(4, 2, 13)
